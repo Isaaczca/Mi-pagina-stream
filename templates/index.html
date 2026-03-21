@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi pagina web</title>
+
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">Dogerman</div>
+    <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#donde-encontrarme">Donde encontrarme</a></li>
+        <li><a href="#ideas">Ideas para el stream</a></li>
+    </ul>
+</nav>
+
+<header id="inicio" class="hero-section">
+
+  <div class="particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+    <h1>Bienvenido a mi pagina web</h1>
+    <p>Descubre mas sobre mi</p>
+    <a href="#donde-encontrarme" class="btn-primary">Descubrir más</a>
+</header>
+
+<section id="donde-encontrarme" class="cards-container">
+    <h2>Mis cuentas</h2>
+<div class="cards">
+
+    <div class="card">
+        <i class="fab fa-instagram icon"></i>
+        <h3>Instagram</h3>
+        <p>Sígueme para enterarte cuando esté en vivo</p>
+        <a href="https://www.instagram.com/dogerman56_?igsh=NGkxdnd4bzBrcnhx" target="_blank" class="btn-social instagram">
+            Ir a mi perfil
+        </a>
+    </div>
+
+    <div class="card">
+        <i class="fab fa-discord icon"></i>
+        <h3>Discord</h3>
+        <p>Únete a la comunidad</p>
+        <a href="https://discord.gg/VFCkMdxcYZ" target="_blank" class="btn-social discord">
+            Unirse
+        </a>
+    </div>
+
+    <div class="card">
+        <i class="fab fa-tiktok icon"></i>
+        <h3>TikTok</h3>
+        <p>Mira mis clips </p>
+        <a href="https://www.tiktok.com/@dogerman56" target="_blank" class="btn-social tiktok">
+            Ver TikTok
+        </a>
+    </div>
+
+   <div class="card">
+    <i class="fab fa-twitch icon"></i>
+    <h3>Twitch</h3>
+    <p>Mírame en directo </p>
+    <a href="https://www.twitch.tv/Dogerman56_dog" target="_blank" class="btn-social twitch">
+        Ver Twitch
+    </a>
+  </div>
+
+</div>
+</section>
+
+<section id="ideas" class="contact-section">
+    <h2>Ideas para el stream</h2>
+    <p>¿Tienes ideas para el stream? Envíamelas por correo </p>
+
+    <p class="correo"> zurielisaaac22@gmail.com</p>
+
+   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zurielisaaac22@gmail.com&su=Idea para el stream&body=Hola tengo esta idea:"
+   target="_blank" class="btn-email">
+    
+    <i class="fas fa-envelope"></i> Enviar idea
+
+</a>
+   
+</section>
+
+<footer>
+    <p>&copy; 2026 Derechos reservados</p>
+</footer>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
