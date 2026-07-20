@@ -1,102 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi pagina web</title>
-
-   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<head>  
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title> Sitio web de Iniciar sesion y Registrarse </title> 
+ <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<nav class="navbar">
-    <div class="logo">Dogerman</div>
-    <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#donde-encontrarme">Donde encontrarme</a></li>
-        <li><a href="#ideas">Ideas para el stream</a></li>
-    </ul>
-</nav>
+ <div class="PantallaInicio">
+       <h3 class="Titulo">Bienvenidos a FitMaterial</h3>
+        <button class="BotonPrincipal">Ingresar</button>
+ </div>
 
-<header id="inicio" class="hero-section">
+ <div class="ContenedorDashboard">
+    <div class="MarcoMaterial MarcoNoticia noticia-izquierda">
+        <div class="CarruselNoticia">
+            <img src="c:\Users\Windows\Downloads\otro poster.png" class="SlideItem active-slide" alt="Noticia 1A">
+            <img src="c:\Users\Windows\Downloads\fitMaterial ventajas opinion del equipo.png" class="SlideItem" alt="Noticia 1B">
+        </div>
+    </div>
+    <div class="MarcoMaterial MarcoNoticia noticia-centro">
+        <div class="CarruselNoticia">
+            <img src="c:\Users\Windows\Downloads\POSTER DE ANUNCIOS.png" class="SlideItem active-slide" alt="Eventos UTSC">
+            <img src="c:\Users\Windows\Downloads\Equipo3B-Copa UTSC.png" class="SlideItem" alt="Noticia 2B">
+        </div>
+    </div>
+    <div class="MarcoMaterial MarcoNoticia noticia-derecha">
+        <div class="CarruselNoticia">
+            <img src="c:\Users\Windows\Downloads\fitmaterial.png" class="SlideItem active-slide" alt="Noticia 3A">
+            <img src="c:\Users\Windows\Downloads\PEGAR EN VISAUL.png" class="SlideItem" alt="Noticia 3B">
+        </div>
+    </div>
+ </div>
 
-  <div class="particles">
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-    <h1>Bienvenido a mi pagina web</h1>
-    <p>Descubre mas sobre mi</p>
-    <a href="#donde-encontrarme" class="btn-primary">Descubrir más</a>
-</header>
+    <header>
+         <h2 class="FitMaterial">FitMaterial</h2>
+         <nav class= "Navegacion">  
+         <a href="#" class="Inicio">Inicio</a>
+         <a href="#" class="Material">Material</a>
+         <a href="#" id="btnPerfilNav">Perfil</a>
+        <a href="#" class="Codigo-QR">Código QR</a>
+         <button class="BotonDeIniciarSesion">Iniciar sesión</button>
+        </nav>
+    </header>
 
-<section id="donde-encontrarme" class="cards-container">
-    <h2>Mis cuentas</h2>
-<div class="cards">
+ <div class="MarcoIyR">
+        <span class="iconoDe-Cerrar"><ion-icon name="close-outline"></ion-icon></span>
+        <div class="formularioIniciarSesion">
+          <h2>Iniciar sesión</h2>
+         <form action="#">
+             <div class="Caja">
+                 <samp class="icono"><ion-icon name="mail"></ion-icon></samp>
+                 <input type="email" id="loginEmail" required>
+                 <label>Email</label>
+             </div>
+             <div class="Caja">
+                  <samp class="icono"><ion-icon name="lock-closed"></ion-icon></samp>
+                  <input type="Contraseña" required>
+                  <label>Contraseña</label>
+             </div>
+             <div class="Recordar-Contraseña">
+                    <label><input type="checkbox">Recordar contraseña</label>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+             </div>
+             <button type="submit" class="btn">Iniciar sesión</button>
+             <div class="cambiarFormulario">
+                   <p>
+                     ¿No tienes cuenta?<a href="#" class="linkRegistrarse">Registrarse</a>
+                   </p>
+             </div>
+         </form>
+     </div>
+      <div class="formularioRegistro">
+         <h2>Registrarse</h2>
+         <form action="#">
+             <div class="Caja">
+                 <samp class="icono"><ion-icon name="person"></ion-icon></samp>
+                 <input type="text" id="registroNombre" required>
+                 <label>Nombre</label>
+             </div>
+             <div class="Caja">
+                 <samp class="icono"><ion-icon name="lock-closed"></ion-icon></samp>
+                 <input type="password" required>
+                 <label>Contraseña</label>
+             </div>
+             <div class="Terminos-y-Condiciones">
+                 <label><input type="checkbox">Estoy de acuerdo con los terminos y condiciones</label>
+             </div>
+             <button type="submit" class="btn">Registrarse</button>
+             <div class="cambiarFormulario">
+                 <p>¿Ya tienes cuenta?<a href="#" class="linkIniciarSesion">Iniciar sesión</a> </p>
+             </div>
+         </form>
+     </div>
+ </div>
 
-    <div class="card">
-        <i class="fab fa-instagram icon"></i>
-        <h3>Instagram</h3>
-        <p>Sígueme para enterarte cuando esté en vivo</p>
-        <a href="https://www.instagram.com/dogerman56_?igsh=NGkxdnd4bzBrcnhx" target="_blank" class="btn-social instagram">
-            Ir a mi perfil
-        </a>
+ <div class="ContenedorMateriales">
+    <div class="MarcoMaterial">
+        <h2 class="NombreBalon">Balón Voit Voleibol</h2>
+        <div class="ImagenBalon">
+            <img src="c:\Users\Windows\Downloads\balon_de_volley-removebg-preview (1).png" alt="Balón Voit Voleibol">
+        </div>
+        <a href="#" class="BotonPedirForm">Pedir</a>
     </div>
 
-    <div class="card">
-        <i class="fab fa-discord icon"></i>
-        <h3>Discord</h3>
-        <p>Únete a la comunidad</p>
-        <a href="https://discord.gg/VFCkMdxcYZ" target="_blank" class="btn-social discord">
-            Unirse
-        </a>
+    <div class="MarcoMaterial">
+        <h2 class="NombreBalon">Balón Molten Básquetbol</h2>
+        <div class="ImagenBalon">
+            <img src="c:\Users\Windows\Downloads\balon_de_basquet-removebg-preview.png" alt="Balón Molten">
+        </div>
+        <a href="#" class="BotonPedirForm">Pedir</a>
     </div>
 
-    <div class="card">
-        <i class="fab fa-tiktok icon"></i>
-        <h3>TikTok</h3>
-        <p>Mira mis clips </p>
-        <a href="https://www.tiktok.com/@dogerman56_" target="_blank" class="btn-social tiktok">
-          Ver TikTok
-        </a>
+    <div class="MarcoMaterial">
+        <h2 class="NombreBalon">Balón Voit Fútbol</h2>
+        <div class="ImagenBalon">
+            <img src="c:\Users\Windows\Downloads\balon_de_fut-removebg-preview.png" alt="Balón Voit Fútbol">
+        </div>
+        <a href="#" class="BotonPedirForm">Pedir</a>
     </div>
+ </div>
 
-   <div class="card">
-    <i class="fab fa-twitch icon"></i>
-    <h3>Twitch</h3>
-    <p>Mírame en directo </p>
-    <a href="https://www.twitch.tv/Dogerman56_dog" target="_blank" class="btn-social twitch">
-        Ver Twitch
-    </a>
-  </div>
+ <div class="ContenedorPerfil" id="contenedorPerfil">
+    <span class="IconoCerrarPerfil" id="iconoCerrarPerfil"><ion-icon name="close-outline"></ion-icon></span>
+    <div class="MarcoPerfil">
+        <div class="EncabezadoPerfil">
+            <span class="TextoLogoPerfil">FitMaterial</span>
+            <input type="file" id="inputFotoPerfil" accept="image/*" style="display: none;">
+            <div class="ContenedorAvatar" onclick="document.getElementById('inputFotoPerfil').click()">
+                <img src="https://via.placeholder.com/150" alt="" id="imgAvatarPerfil">
+                <div class="CapaSubir"><ion-icon name="camera-outline"></ion-icon></div>
+            </div>
+            <div class="DatosUsuarioPerfil">
+                <h2 id="nombreUsuarioPerfil"></h2>
+                <div class="EstadisticasPerfil">
+                </div>
+                <div class="DescripcionPerfil">
+                    <p id="textoDescripcion"><br></p>
+                </div>
+            </div>
+        </div>
+       <div class="AccionesPerfil">
+            <button class="btnPerfil" id="btnEditarPerfil">Editar perfil</button>
+            <button class="btnPerfil btnGris" id="btnVerHistorial">Historial de préstamos</button>
+        </div>
+    </div>
+ </div>
+ <div class="ModalEditar" id="modalEditar">
+    <div class="Caja">
+        <textarea id="editDescripcion" rows="3" style="width:100%; background:transparent; border:none; border-bottom:2px solid #000; color:#000; outline:none; padding:5px; font-family:inherit; font-weight:600;"></textarea>
+    </div>
+    <div style="display: flex; gap: 10px; margin-top: 20px;">
+        <button class="btn" id="btnGuardarPerfil" style="margin:0;">Guardar</button>
+        <button class="btn" id="btnCancelarEditar" style="margin:0; background:#777;">Cancelar</button>
+    </div>
+ </div>
 
-</div>
-</section>
+ <div class="ContenedorHistorial" id="contenedorHistorial">
+    <span class="IconoCerrarHistorial" id="iconoCerrarHistorial"><ion-icon name="close-outline"></ion-icon></span>
+    <h3>Historial de Préstamos</h3>
+    <div class="TablaResponsiva">
+        <table>
+            <thead>
+                <tr>
+                    <th>Material / Balón</th>
+                    <th>Nombre</th>
+                    <th>Grupo</th>
+                    <th>Hora</th>
+                </tr>
+            </thead>
+            <tbody id="listaHistorial">
+                <tr class="fila-vacia">
+                    <td colspan="4" style="text-align: center; color: #aaa; padding: 20px;">No hay préstamos registrados aún.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ </div>
 
-<section id="ideas" class="contact-section">
-    <h2>Ideas para el stream</h2>
-    <p>¿Tienes ideas para el stream? Envíamelas por correo </p>
+ <div class="ContenedorFormularioPrestamo" id="formularioPrestamo">
+    <div class="MarcoMaterial MarcoFormulario">
+        <span class="IconoCerrarFormulario"><ion-icon name="close-outline"></ion-icon></span>
+        <div class="InfoBalonSeleccionado">
+            <h2 class="TituloBalonForm" id="tituloBalonForm">Balón de Fútbol</h2>
+            <img src="" class="ImgBalonForm" id="imgBalonForm" alt="Balón Seleccionado">
+        </div>
+        <form class="FormPrestamo">
+            <div class="GrupoInput">
+                <label>Nombre</label>
+                <input type="text" required placeholder="Tu nombre completo">
+            </div>
+            <div class="GrupoInput">
+                <label>Grupo</label>
+                <input type="text" required placeholder="Ej. TIC 3B">
+            </div>
+            <div class="GrupoInput">
+                <label>Hora de Préstamo</label>
+                <input type="time" required>
+            </div>
+            <button type="submit" class="BotonPedirForm">Pedir</button>
+        </form>
+    </div>
+ </div>
 
-    <p class="correo"> zurielisaaac22@gmail.com</p>
+ <div class="ContenedorQR" id="contenedorQR">
+    <span class="IconoCerrarQR" id="iconoCerrarQR"><ion-icon name="close-outline"></ion-icon></span>
+    <div class="SeccionContenidoQR">
+        <div class="DatosPrestamo">
+            <h2>Préstamo Realizado</h2>
+            <div class="LineaSeparadora"></div>
+            <p><strong>A nombre de:</strong> <span id="qrNombre">Isaac Zuriel Castillo</span></p>
+            <p><strong>Grupo:</strong> <span id="qrGrupo">3B</span></p>
+            <p><strong>Hora:</strong> <span id="qrHora">10:00 Am</span></p>
+            <p class="TextoExito">Su código fue generado exitosamente</p>
+        </div>
+        <div class="VisualizacionQR">
+            <div class="MarcoCodigo">
+                <img src="" alt="Código QR de Préstamo" id="imagenQR">
+            </div>
+            <p class="RecordatorioMaterial">Cuide el Material</p>
+        </div>
+    </div>
+ </div>
 
-   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zurielisaaac22@gmail.com&su=Idea para el stream&body=Hola tengo esta idea:"
-   target="_blank" class="btn-email">
-    
-    <i class="fas fa-envelope"></i> Enviar idea
-
-</a>
-   
-</section>
-
-<footer>
-    <p>&copy; 2026 Derechos reservados</p>
-</footer>
-
-<script src="{{ url_for('static', filename='app.js') }}"></script>
-
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
